@@ -1,0 +1,6 @@
+site_name: 3d_armor
+site_url: https://github.com/stujones11/minetest-3d_armor
+repo_url: https://github.com/stujones11/minetest-3d_armor
+nav:
+    - Home: index.md
+    - Issue Tracker: https://github.com/stujones11/minetest-3d_armor/issues
