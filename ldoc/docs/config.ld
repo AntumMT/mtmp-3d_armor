@@ -3,7 +3,6 @@ title = "3D Armor"
 description = "3d_armor mod for [Minetest](http://minetest.net/)"
 format = "markdown"
 not_luadoc = true
-readme = "README.md"
 kind_names = {topic="Sections"}
 
 add_language_extension("ld", "lua")
