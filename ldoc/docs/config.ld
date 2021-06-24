@@ -4,6 +4,7 @@ description = "3d_armor mod for [Minetest](http://minetest.net/)"
 format = "markdown"
 not_luadoc = true
 kind_names = {topic="Sections"}
+readme = "../README.md"
 
 add_language_extension("ld", "lua")
 
