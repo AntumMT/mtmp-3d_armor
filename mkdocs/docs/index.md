@@ -6,9 +6,17 @@ Main object.
 
 ### Methods
 
-* `equip(player, itemstack)`
+* `equip(player, itemstack)`: Returns leftover items from stack.
+	* Equips a piece of armor to a player.
+	* `player`: Player to whom item is equipped.
+	* `itemstack`: Item to be equipped.
 * `unequip(player, armor_element)`
+	* Removes a piece of armor from a player.
+	* `player`: Player from whom item is removed.
+	* `armor_element`: Item to be removed.
 * `remove_all(player)`
+	* Removes all armor worn by player.
+	* `player`: Player from whom to remove all armor.
 * `get_player_skin(name)`
 * `update_skin(name)`
 * `add_preview(preview)`

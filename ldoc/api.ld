@@ -4,22 +4,23 @@
 --  @topic API
 
 
----
+--- Equips a piece of armor to a player.
 --
 --  @function armor.equip
---  @tparam ObjectRef player
---  @param ItemStack itemstack
+--  @tparam ObjectRef player Player to whom item is equipped.
+--  @tparam ItemStack itemstack Item to be equipped.
+--  @treturn ItemStack Leftover items from stack.
 
----
+--- Removes a piece of armor from a player.
 --
 --  @function armor.unequip
---  @tparam ObjectRef player
---  @param armor_element
+--  @tparam ObjectRef player Player from whom item is removed.
+--  @param armor_element Item to be removed.
 
----
+--- Removes all armor worn by player.
 --
 --  @function armor.remove_all
---  @tparam ObjectRef player
+--  @tparam ObjectRef player Player from whom to remove all armor.
 
 ---
 --
