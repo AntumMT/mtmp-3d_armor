@@ -57,95 +57,89 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#armor.equip">armor.equip (self, player, ItemStack)</a></td>
+	<td class="name" nowrap><a href="#armor.equip">armor.equip (player, itemstack)</a></td>
+	<td class="summary">Equips a piece of armor to a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#armor.unequip">armor.unequip (player, armor_element)</a></td>
+	<td class="summary">Removes a piece of armor from a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#armor.remove_all">armor.remove_all (player)</a></td>
+	<td class="summary">Removes all armor worn by player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#armor.get_player_skin">armor.get_player_skin (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.unequip">armor.unequip (self, player, armor_element)</a></td>
+	<td class="name" nowrap><a href="#armor.update_skin">armor.update_skin (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.remove_all">armor.remove_all (self, player)</a></td>
+	<td class="name" nowrap><a href="#armor.add_preview">armor.add_preview (preview)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.get_player_skin">armor.get_player_skin (self, name)</a></td>
+	<td class="name" nowrap><a href="#armor.get_preview">armor.get_preview (name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.update_skin">armor.update_skin (self, name)</a></td>
+	<td class="name" nowrap><a href="#armor.get_armor_formspec">armor.get_armor_formspec (name, listring)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.add_preview">armor.add_preview (self, preview)</a></td>
+	<td class="name" nowrap><a href="#armor.get_element">armor.get_element (item_name)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.get_preview">armor.get_preview (self, name)</a></td>
+	<td class="name" nowrap><a href="#armor.serialize_inventory_list">armor.serialize_inventory_list (list)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.get_armor_formspec">armor.get_armor_formspec (self, name, listring)</a></td>
+	<td class="name" nowrap><a href="#armor.deserialize_inventory_list">armor.deserialize_inventory_list (list_string)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.get_element">armor.get_element (self, item_name)</a></td>
+	<td class="name" nowrap><a href="#armor.load_armor_inventory">armor.load_armor_inventory (player)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.serialize_inventory_list">armor.serialize_inventory_list (self, list)</a></td>
+	<td class="name" nowrap><a href="#armor.save_armor_inventory">armor.save_armor_inventory (player)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.deserialize_inventory_list">armor.deserialize_inventory_list (self, list_string)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#armor.load_armor_inventory">armor.load_armor_inventory (self, player)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#armor.save_armor_inventory">armor.save_armor_inventory (self, player)</a></td>
-	<td class="summary">
-
-</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#armor.update_inventory">armor.update_inventory (self, player)</a></td>
+	<td class="name" nowrap><a href="#armor.update_inventory">armor.update_inventory (player)</a></td>
 	<td class="summary">DEPRECATED</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.set_inventory_stack">armor.set_inventory_stack (self, player, i, stack)</a></td>
+	<td class="name" nowrap><a href="#armor.set_inventory_stack">armor.set_inventory_stack (player, i, stack)</a></td>
 	<td class="summary">
 
 </td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#armor.get_valid_player">armor.get_valid_player (self, player, msg)</a></td>
+	<td class="name" nowrap><a href="#armor.get_valid_player">armor.get_valid_player (player, msg)</a></td>
 	<td class="summary">Checks for a player that can use armor.</td>
 	</tr>
 	<tr>
@@ -167,32 +161,30 @@
     <dl class="function">
     <dt>
     <a name = "armor.equip"></a>
-    <strong>armor.equip (self, player, ItemStack)</strong>
+    <strong>armor.equip (player, itemstack)</strong>
     </dt>
     <dd>
-
-
-
+    Equips a piece of armor to a player.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
-
-
-
+         Player to whom item is equipped.
         </li>
-        <li><span class="parameter">ItemStack</span>
-         itemstack
+        <li><span class="parameter">itemstack</span>
+            <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#itemstack">ItemStack</a></span>
+         Item to be equipped.
         </li>
     </ul>
 
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#itemstack">ItemStack</a></span>
+        Leftover items from stack.
+    </ol>
 
 
 
@@ -200,31 +192,20 @@
 </dd>
     <dt>
     <a name = "armor.unequip"></a>
-    <strong>armor.unequip (self, player, armor_element)</strong>
+    <strong>armor.unequip (player, armor_element)</strong>
     </dt>
     <dd>
-
-
-
+    Removes a piece of armor from a player.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
-
-
-
+         Player from whom item is removed.
         </li>
         <li><span class="parameter">armor_element</span>
-
-
-
+         Item to be removed.
         </li>
     </ul>
 
@@ -235,26 +216,17 @@
 </dd>
     <dt>
     <a name = "armor.remove_all"></a>
-    <strong>armor.remove_all (self, player)</strong>
+    <strong>armor.remove_all (player)</strong>
     </dt>
     <dd>
-
-
-
+    Removes all armor worn by player.
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
-
-
-
+         Player from whom to remove all armor.
         </li>
     </ul>
 
@@ -265,7 +237,7 @@
 </dd>
     <dt>
     <a name = "armor.get_player_skin"></a>
-    <strong>armor.get_player_skin (self, name)</strong>
+    <strong>armor.get_player_skin (name)</strong>
     </dt>
     <dd>
 
@@ -275,11 +247,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">name</span>
 
 
@@ -294,7 +261,7 @@
 </dd>
     <dt>
     <a name = "armor.update_skin"></a>
-    <strong>armor.update_skin (self, name)</strong>
+    <strong>armor.update_skin (name)</strong>
     </dt>
     <dd>
 
@@ -304,11 +271,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">name</span>
 
 
@@ -323,7 +285,7 @@
 </dd>
     <dt>
     <a name = "armor.add_preview"></a>
-    <strong>armor.add_preview (self, preview)</strong>
+    <strong>armor.add_preview (preview)</strong>
     </dt>
     <dd>
 
@@ -333,11 +295,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">preview</span>
 
 
@@ -352,7 +309,7 @@
 </dd>
     <dt>
     <a name = "armor.get_preview"></a>
-    <strong>armor.get_preview (self, name)</strong>
+    <strong>armor.get_preview (name)</strong>
     </dt>
     <dd>
 
@@ -362,11 +319,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">name</span>
 
 
@@ -381,7 +333,7 @@
 </dd>
     <dt>
     <a name = "armor.get_armor_formspec"></a>
-    <strong>armor.get_armor_formspec (self, name, listring)</strong>
+    <strong>armor.get_armor_formspec (name, listring)</strong>
     </dt>
     <dd>
 
@@ -391,11 +343,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">name</span>
 
 
@@ -415,7 +362,7 @@
 </dd>
     <dt>
     <a name = "armor.get_element"></a>
-    <strong>armor.get_element (self, item_name)</strong>
+    <strong>armor.get_element (item_name)</strong>
     </dt>
     <dd>
 
@@ -425,11 +372,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">item_name</span>
 
 
@@ -444,7 +386,7 @@
 </dd>
     <dt>
     <a name = "armor.serialize_inventory_list"></a>
-    <strong>armor.serialize_inventory_list (self, list)</strong>
+    <strong>armor.serialize_inventory_list (list)</strong>
     </dt>
     <dd>
 
@@ -454,11 +396,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">list</span>
 
 
@@ -473,7 +410,7 @@
 </dd>
     <dt>
     <a name = "armor.deserialize_inventory_list"></a>
-    <strong>armor.deserialize_inventory_list (self, list_string)</strong>
+    <strong>armor.deserialize_inventory_list (list_string)</strong>
     </dt>
     <dd>
 
@@ -483,11 +420,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">list_string</span>
 
 
@@ -502,7 +434,7 @@
 </dd>
     <dt>
     <a name = "armor.load_armor_inventory"></a>
-    <strong>armor.load_armor_inventory (self, player)</strong>
+    <strong>armor.load_armor_inventory (player)</strong>
     </dt>
     <dd>
 
@@ -512,11 +444,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
 
@@ -532,7 +459,7 @@
 </dd>
     <dt>
     <a name = "armor.save_armor_inventory"></a>
-    <strong>armor.save_armor_inventory (self, player)</strong>
+    <strong>armor.save_armor_inventory (player)</strong>
     </dt>
     <dd>
 
@@ -542,11 +469,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
 
@@ -562,7 +484,7 @@
 </dd>
     <dt>
     <a name = "armor.update_inventory"></a>
-    <strong>armor.update_inventory (self, player)</strong>
+    <strong>armor.update_inventory (player)</strong>
     </dt>
     <dd>
     DEPRECATED
@@ -570,11 +492,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
 
@@ -590,7 +507,7 @@
 </dd>
     <dt>
     <a name = "armor.set_inventory_stack"></a>
-    <strong>armor.set_inventory_stack (self, player, i, stack)</strong>
+    <strong>armor.set_inventory_stack (player, i, stack)</strong>
     </dt>
     <dd>
 
@@ -600,11 +517,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
 
@@ -631,7 +543,7 @@
 </dd>
     <dt>
     <a name = "armor.get_valid_player"></a>
-    <strong>armor.get_valid_player (self, player, msg)</strong>
+    <strong>armor.get_valid_player (player, msg)</strong>
     </dt>
     <dd>
     Checks for a player that can use armor.
@@ -639,11 +551,6 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">self</span>
-
-
-
-        </li>
         <li><span class="parameter">player</span>
             <span class="types"><a class="type" href="http://minetest.gitlab.io/minetest/class-reference.html#objectref">ObjectRef</a></span>
 
@@ -724,7 +631,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-06-24 01:42:41 </i>
+<i style="float:right;">Last updated 2021-06-24 02:03:50 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
