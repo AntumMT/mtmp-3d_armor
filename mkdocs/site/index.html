@@ -81,9 +81,23 @@
 <p>Main object.</p>
 <h3 id="methods">Methods</h3>
 <ul>
-<li><code>equip(player, itemstack)</code></li>
-<li><code>unequip(player, armor_element)</code></li>
-<li><code>remove_all(player)</code></li>
+<li><code>equip(player, itemstack)</code>: Returns leftover items from stack.<ul>
+<li>Equips a piece of armor to a player.</li>
+<li><code>player</code>: Player to whom item is equipped.</li>
+<li><code>itemstack</code>: Item to be equipped.</li>
+</ul>
+</li>
+<li><code>unequip(player, armor_element)</code><ul>
+<li>Removes a piece of armor from a player.</li>
+<li><code>player</code>: Player from whom item is removed.</li>
+<li><code>armor_element</code>: Item to be removed.</li>
+</ul>
+</li>
+<li><code>remove_all(player)</code><ul>
+<li>Removes all armor worn by player.</li>
+<li><code>player</code>: Player from whom to remove all armor.</li>
+</ul>
+</li>
 <li><code>get_player_skin(name)</code></li>
 <li><code>update_skin(name)</code></li>
 <li><code>add_preview(preview)</code></li>
@@ -195,5 +209,5 @@
 
 <!--
 MkDocs version : 1.2.1
-Build Date UTC : 2021-06-24 08:30:01.061367+00:00
+Build Date UTC : 2021-06-24 09:04:18.546958+00:00
 -->
