@@ -7,9 +7,7 @@ not_luadoc = true
 boilerplate = false
 wrap = false
 
-file = {
-	"3d_armor/api.lua",
-}
+file = {"api.lua"}
 
 
 new_type("setting", "Settings")
