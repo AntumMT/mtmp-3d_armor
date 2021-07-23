@@ -51,6 +51,8 @@ see armor.conf.example for all available options.
 
 For mod installation instructions, please visit: http://wiki.minetest.com/wiki/Installing_Mods
 
+[API Reference](https://minetest-mods.github.io/mp-3d_armor/3d_armor/docs/reference/)
+
 [mod] Visible Wielded Items [wieldview]
 ---------------------------------------
 
