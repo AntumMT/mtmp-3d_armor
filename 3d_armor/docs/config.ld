@@ -7,15 +7,22 @@ not_luadoc = true
 boilerplate = false
 wrap = false
 
-file = {"api.lua"}
+file = {
+	"api.lua",
+	"armor.lua",
+}
 
 
 new_type("setting", "Settings")
 new_type("chatcmd", "Chat Commands", false, "chatparam")
-new_type("craftitem", "Item")
-new_type("node", "Nodes")
-new_type("recipe", "Craft Recipes")
 new_type("feature", "Features")
+new_type("item", "Items")
+new_type("tool", "Tools")
+new_type("node", "Nodes")
+new_type("craft", "Crafting")
+new_type("armor", "Armors")
+
+alias("craftitem", "item")
 
 custom_tags = {
 	-- settings
@@ -37,12 +44,19 @@ custom_tags = {
 		"option",
 		title = "Options",
 	},
-	-- craft items
+	-- craft items/tools
+	{
+		"img",
+		title = "Image",
+		format = function(value)
+			return "<img src=\"../../../textures/" .. value .. "\" style=\"width:32px; height:32px;\" />"
+		end,
+	},
 	{
 		"image",
 		title = "Image",
 		format = function(value)
-			return "<img src=\"../../textures/" .. value .. "\" style=\"width:32px; height:32px;\" />"
+			return "<img src=\"" .. value .. "\" style=\"width:32px; height:32px;\" />"
 		end,
 	},
 	{
@@ -55,7 +69,7 @@ custom_tags = {
 	},
 	-- craft recipes
 	{
-		"rtype",
+		"crafttype",
 		title = "Recipe type",
 	},
 	{

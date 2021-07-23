@@ -1,6 +1,21 @@
+
+--- Registered armors.
+--
+--  @topic armor
+
+
 -- support for i18n
 local S = armor.get_translator
 
+
+--- Admin
+--
+--  @section admin
+
+--- Admin helmet.
+--
+--  @armor 3d_armor:helmet_admin
+--  @img 3d_armor_inv_helmet_admin.png
 armor:register_armor("3d_armor:helmet_admin", {
 	description = S("Admin Helmet"),
 	inventory_image = "3d_armor_inv_helmet_admin.png",
@@ -12,6 +27,10 @@ armor:register_armor("3d_armor:helmet_admin", {
 	end,
 })
 
+--- Admin chestplate.
+--
+--  @armor 3d_armor:chestplate_admin
+--  @img 3d_armor_inv_chestplate_admin.png
 armor:register_armor("3d_armor:chestplate_admin", {
 	description = S("Admin Chestplate"),
 	inventory_image = "3d_armor_inv_chestplate_admin.png",
@@ -23,6 +42,10 @@ armor:register_armor("3d_armor:chestplate_admin", {
 	end,
 })
 
+--- Admin leggings.
+--
+--  @armor 3d_armor:leggings_admin
+--  @img 3d_armor_inv_leggings_admin.png
 armor:register_armor("3d_armor:leggings_admin", {
 	description = S("Admin Leggings"),
 	inventory_image = "3d_armor_inv_leggings_admin.png",
@@ -34,6 +57,10 @@ armor:register_armor("3d_armor:leggings_admin", {
 	end,
 })
 
+--- Admin boots.
+--
+--  @armor 3d_armor:boots_admin
+--  @img 3d_armor_inv_boots_admin.png
 armor:register_armor("3d_armor:boots_admin", {
 	description = S("Admin Boots"),
 	inventory_image = "3d_armor_inv_boots_admin.png",
@@ -50,7 +77,18 @@ minetest.register_alias("adminhelmet", "3d_armor:helmet_admin")
 minetest.register_alias("adminchestplate", "3d_armor:chestplate_admin")
 minetest.register_alias("adminleggings", "3d_armor:leggings_admin")
 
+
+--- Wood
+--
+--  Requires setting `armor_material_wood`.
+--
+--  @section wood
+
 if armor.materials.wood then
+	--- Wood helmet.
+	--
+	--  @armor 3d_armor:helmet_wood
+	--  @img 3d_armor_inv_helmet_wood.png
 	armor:register_armor("3d_armor:helmet_wood", {
 		description = S("Wood Helmet"),
 		inventory_image = "3d_armor_inv_helmet_wood.png",
@@ -58,6 +96,10 @@ if armor.materials.wood then
 		armor_groups = {fleshy=5},
 		damage_groups = {cracky=3, snappy=2, choppy=3, crumbly=2, level=1},
 	})
+	--- Wood chestplate.
+	--
+	--  @armor 3d_armor:chestplate_wood
+	--  @img 3d_armor_inv_chestplate_wood.png
 	armor:register_armor("3d_armor:chestplate_wood", {
 		description = S("Wood Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_wood.png",
@@ -65,6 +107,10 @@ if armor.materials.wood then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=3, snappy=2, choppy=3, crumbly=2, level=1},
 	})
+	--- Wood leggings.
+	--
+	--  @armor 3d_armor:leggings_wood
+	--  @img 3d_armor_inv_leggings_wood.png
 	armor:register_armor("3d_armor:leggings_wood", {
 		description = S("Wood Leggings"),
 		inventory_image = "3d_armor_inv_leggings_wood.png",
@@ -72,6 +118,10 @@ if armor.materials.wood then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=3, snappy=2, choppy=3, crumbly=2, level=1},
 	})
+	--- Wood boots.
+	--
+	--  @armor 3d_armor:boots_wood
+	--  @img 3d_armor_inv_boots_wood.png
 	armor:register_armor("3d_armor:boots_wood", {
 		description = S("Wood Boots"),
 		inventory_image = "3d_armor_inv_boots_wood.png",
@@ -94,7 +144,18 @@ if armor.materials.wood then
 	end
 end
 
+
+--- Cactus
+--
+--  Requires setting `armor_material_cactus`.
+--
+--  @section cactus
+
 if armor.materials.cactus then
+	--- Cactus helmet.
+	--
+	--  @armor 3d_armor:helmet_cactus
+	--  @img 3d_armor_inv_helmet_cactus.png
 	armor:register_armor("3d_armor:helmet_cactus", {
 		description = S("Cactus Helmet"),
 		inventory_image = "3d_armor_inv_helmet_cactus.png",
@@ -102,6 +163,10 @@ if armor.materials.cactus then
 		armor_groups = {fleshy=5},
 		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
 	})
+	--- Cactus chestplate.
+	--
+	--  @armor 3d_armor:chestplate_cactus
+	--  @img 3d_armor_inv_chestplate_cactus.png
 	armor:register_armor("3d_armor:chestplate_cactus", {
 		description = S("Cactus Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_cactus.png",
@@ -109,6 +174,10 @@ if armor.materials.cactus then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
 	})
+	--- Cactus leggings.
+	--
+	--  @armor 3d_armor:leggings_cactus
+	--  @img 3d_armor_inv_leggings_cactus.png
 	armor:register_armor("3d_armor:leggings_cactus", {
 		description = S("Cactus Leggings"),
 		inventory_image = "3d_armor_inv_leggings_cactus.png",
@@ -116,6 +185,10 @@ if armor.materials.cactus then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=3, snappy=3, choppy=2, crumbly=2, level=1},
 	})
+	--- Cactus boots.
+	--
+	--  @armor 3d_armor:boots_cactus
+	--  @img 3d_armor_inv_boots_cactus.png
 	armor:register_armor("3d_armor:boots_cactus", {
 		description = S("Cactus Boots"),
 		inventory_image = "3d_armor_inv_boots_cactus.png",
@@ -138,7 +211,18 @@ if armor.materials.cactus then
 	end
 end
 
+
+--- Steel
+--
+--  Requires setting `armor_material_steel`.
+--
+--  @section steel
+
 if armor.materials.steel then
+	--- Steel helmet.
+	--
+	--  @armor 3d_armor:helmet_steel
+	--  @img 3d_armor_inv_helmet_steel.png
 	armor:register_armor("3d_armor:helmet_steel", {
 		description = S("Steel Helmet"),
 		inventory_image = "3d_armor_inv_helmet_steel.png",
@@ -147,6 +231,10 @@ if armor.materials.steel then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
+	--- Steel chestplate.
+	--
+	--  @armor 3d_armor:chestplate_steel
+	--  @img 3d_armor_inv_chestplate_steel.png
 	armor:register_armor("3d_armor:chestplate_steel", {
 		description = S("Steel Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_steel.png",
@@ -155,6 +243,10 @@ if armor.materials.steel then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
+	--- Steel leggings.
+	--
+	--  @armor 3d_armor:leggings_steel
+	--  @img 3d_armor_inv_leggings_steel.png
 	armor:register_armor("3d_armor:leggings_steel", {
 		description = S("Steel Leggings"),
 		inventory_image = "3d_armor_inv_leggings_steel.png",
@@ -163,6 +255,10 @@ if armor.materials.steel then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=3, choppy=2, crumbly=1, level=2},
 	})
+	--- Steel boots.
+	--
+	--  @armor 3d_armor:boots_steel
+	--  @img 3d_armor_inv_boots_steel.png
 	armor:register_armor("3d_armor:boots_steel", {
 		description = S("Steel Boots"),
 		inventory_image = "3d_armor_inv_boots_steel.png",
@@ -173,7 +269,18 @@ if armor.materials.steel then
 	})
 end
 
+
+--- Bronze
+--
+--  Requires setting `armor_material_bronze`.
+--
+--  @section bronze
+
 if armor.materials.bronze then
+	--- Bronze helmet.
+	--
+	--  @armor 3d_armor:helmet_bronze
+	--  @img 3d_armor_inv_helmet_bronze.png
 	armor:register_armor("3d_armor:helmet_bronze", {
 		description = S("Bronze Helmet"),
 		inventory_image = "3d_armor_inv_helmet_bronze.png",
@@ -182,6 +289,10 @@ if armor.materials.bronze then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
+	--- Bronze chestplate.
+	--
+	--  @armor 3d_armor:chestplate_bronze
+	--  @img 3d_armor_inv_chestplate_bronze.png
 	armor:register_armor("3d_armor:chestplate_bronze", {
 		description = S("Bronze Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_bronze.png",
@@ -190,6 +301,10 @@ if armor.materials.bronze then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
+	--- Bronze leggings.
+	--
+	--  @armor 3d_armor:leggings_bronze
+	--  @img 3d_armor_inv_leggings_bronze.png
 	armor:register_armor("3d_armor:leggings_bronze", {
 		description = S("Bronze Leggings"),
 		inventory_image = "3d_armor_inv_leggings_bronze.png",
@@ -198,6 +313,10 @@ if armor.materials.bronze then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=3, snappy=2, choppy=2, crumbly=1, level=2},
 	})
+	--- Bronze boots.
+	--
+	--  @armor 3d_armor:boots_bronze
+	--  @img 3d_armor_inv_boots_bronze.png
 	armor:register_armor("3d_armor:boots_bronze", {
 		description = S("Bronze Boots"),
 		inventory_image = "3d_armor_inv_boots_bronze.png",
@@ -208,7 +327,18 @@ if armor.materials.bronze then
 	})
 end
 
+
+--- Diamond
+--
+--  Requires setting `armor_material_diamond`.
+--
+--  @section diamond
+
 if armor.materials.diamond then
+	--- Diamond helmet.
+	--
+	--  @armor 3d_armor:_diamond
+	--  @img 3d_armor_inv_helmet_diamond.png
 	armor:register_armor("3d_armor:helmet_diamond", {
 		description = S("Diamond Helmet"),
 		inventory_image = "3d_armor_inv_helmet_diamond.png",
@@ -216,6 +346,10 @@ if armor.materials.diamond then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, choppy=1, level=3},
 	})
+	--- Diamond chestplate.
+	--
+	--  @armor 3d_armor:chestplate_diamond
+	--  @img 3d_armor_inv_chestplate_diamond.png
 	armor:register_armor("3d_armor:chestplate_diamond", {
 		description = S("Diamond Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_diamond.png",
@@ -223,6 +357,10 @@ if armor.materials.diamond then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, choppy=1, level=3},
 	})
+	--- Diamond leggings.
+	--
+	--  @armor 3d_armor:leggings_diamond
+	--  @img 3d_armor_inv_leggings_diamond.png
 	armor:register_armor("3d_armor:leggings_diamond", {
 		description = S("Diamond Leggings"),
 		inventory_image = "3d_armor_inv_leggings_diamond.png",
@@ -230,6 +368,10 @@ if armor.materials.diamond then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, choppy=1, level=3},
 	})
+	--- Diamond boots.
+	--
+	--  @armor 3d_armor:boots_diamond
+	--  @img 3d_armor_inv_boots_diamond.png
 	armor:register_armor("3d_armor:boots_diamond", {
 		description = S("Diamond Boots"),
 		inventory_image = "3d_armor_inv_boots_diamond.png",
@@ -239,7 +381,18 @@ if armor.materials.diamond then
 	})
 end
 
+
+--- Gold
+--
+--  Requires `armor_material_gold`.
+--
+--  @section gold
+
 if armor.materials.gold then
+	--- Gold helmet.
+	--
+	--  @armor 3d_armor:helmet_gold
+	--  @img 3d_armor_inv_helmet_gold.png
 	armor:register_armor("3d_armor:helmet_gold", {
 		description = S("Gold Helmet"),
 		inventory_image = "3d_armor_inv_helmet_gold.png",
@@ -248,6 +401,10 @@ if armor.materials.gold then
 		armor_groups = {fleshy=10},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
+	--- Gold chestplate.
+	--
+	--  @armor 3d_armor:chestplate_gold
+	--  @img 3d_armor_inv_chestplate_gold.png
 	armor:register_armor("3d_armor:chestplate_gold", {
 		description = S("Gold Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_gold.png",
@@ -256,6 +413,10 @@ if armor.materials.gold then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
+	--- Gold leggings.
+	--
+	--  @armor 3d_armor:leggings_gold
+	--  @img 3d_armor_inv_leggings_gold.png
 	armor:register_armor("3d_armor:leggings_gold", {
 		description = S("Gold Leggings"),
 		inventory_image = "3d_armor_inv_leggings_gold.png",
@@ -264,6 +425,10 @@ if armor.materials.gold then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=1, snappy=2, choppy=2, crumbly=3, level=2},
 	})
+	--- Gold boots.
+	--
+	--  @armor 3d_armor:boots_gold
+	--  @img 3d_armor_inv_boots_gold.png
 	armor:register_armor("3d_armor:boots_gold", {
 		description = S("Gold Boots"),
 		inventory_image = "3d_armor_inv_boots_gold.png",
@@ -274,7 +439,18 @@ if armor.materials.gold then
 	})
 end
 
+
+--- Mithril
+--
+--  Requires `armor_material_mithril`.
+--
+--  @section mithril
+
 if armor.materials.mithril then
+	--- Mithril helmet.
+	--
+	--  @armor 3d_armor:helmet_mithril
+	--  @img 3d_armor_inv_helmet_mithril.png
 	armor:register_armor("3d_armor:helmet_mithril", {
 		description = S("Mithril Helmet"),
 		inventory_image = "3d_armor_inv_helmet_mithril.png",
@@ -282,6 +458,10 @@ if armor.materials.mithril then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Mithril chestplate.
+	--
+	--  @armor 3d_armor:chestplate_mithril
+	--  @img 3d_armor_inv_chestplate_mithril.png
 	armor:register_armor("3d_armor:chestplate_mithril", {
 		description = S("Mithril Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_mithril.png",
@@ -289,6 +469,10 @@ if armor.materials.mithril then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Mithril leggings.
+	--
+	--  @armor 3d_armor:leggings_mithril
+	--  @img 3d_armor_inv_leggings_mithril.png
 	armor:register_armor("3d_armor:leggings_mithril", {
 		description = S("Mithril Leggings"),
 		inventory_image = "3d_armor_inv_leggings_mithril.png",
@@ -296,6 +480,10 @@ if armor.materials.mithril then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Mithril boots.
+	--
+	--  @armor 3d_armor:boots_mithril
+	--  @img 3d_armor_inv_boots_mithril.png
 	armor:register_armor("3d_armor:boots_mithril", {
 		description = S("Mithril Boots"),
 		inventory_image = "3d_armor_inv_boots_mithril.png",
@@ -305,7 +493,18 @@ if armor.materials.mithril then
 	})
 end
 
+
+--- Crystal
+--
+--  Requires `armor_material_crystal`.
+--
+--  @section crystal
+
 if armor.materials.crystal then
+	--- Crystal helmet.
+	--
+	--  @armor 3d_armor:helmet_crystal
+	--  @img 3d_armor_inv_helmet_crystal.png
 	armor:register_armor("3d_armor:helmet_crystal", {
 		description = S("Crystal Helmet"),
 		inventory_image = "3d_armor_inv_helmet_crystal.png",
@@ -313,6 +512,10 @@ if armor.materials.crystal then
 		armor_groups = {fleshy=15},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Crystal chestplate.
+	--
+	--  @armor 3d_armor:_crystal
+	--  @img 3d_armor_inv_chestplate_crystal.png
 	armor:register_armor("3d_armor:chestplate_crystal", {
 		description = S("Crystal Chestplate"),
 		inventory_image = "3d_armor_inv_chestplate_crystal.png",
@@ -320,6 +523,10 @@ if armor.materials.crystal then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Crystal leggings.
+	--
+	--  @armor 3d_armor:leggings_crystal
+	--  @img 3d_armor_inv_leggings_crystal.png
 	armor:register_armor("3d_armor:leggings_crystal", {
 		description = S("Crystal Leggings"),
 		inventory_image = "3d_armor_inv_leggings_crystal.png",
@@ -327,6 +534,10 @@ if armor.materials.crystal then
 		armor_groups = {fleshy=20},
 		damage_groups = {cracky=2, snappy=1, level=3},
 	})
+	--- Crystal boots.
+	--
+	--  @armor 3d_armor:boots_crystal
+	--  @img 3d_armor_inv_boots_crystal.png
 	armor:register_armor("3d_armor:boots_crystal", {
 		description = S("Crystal Boots"),
 		inventory_image = "3d_armor_inv_boots_crystal.png",
