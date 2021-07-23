@@ -449,7 +449,7 @@ end
 --  @tparam ObjectRef player
 --  @param hitter
 --  @param[opt] time_from_last_punch
---  @tparam[opt] table tool_capabilities See  [tool capabilities example](https://minetest.gitlab.io/minetest/tools/#example-definition-of-the-capabilities-of-a-tool).
+--  @tparam[opt] table tool_capabilities See `tool capabilities example`.
 armor.punch = function(self, player, hitter, time_from_last_punch, tool_capabilities)
 	local name, armor_inv = self:get_valid_player(player, "[punch]")
 	if not name then

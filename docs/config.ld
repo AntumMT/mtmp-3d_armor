@@ -150,3 +150,7 @@ end)
 custom_see_handler("ToolDef", function(name, section)
 	return name, "https://minetest.gitlab.io/minetest/tools/#tools-definition"
 end)
+
+custom_see_handler("tool capabilities example", function(name, section)
+	return name, "https://minetest.gitlab.io/minetest/tools/#example-definition-of-the-capabilities-of-a-tool"
+end)
